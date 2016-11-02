@@ -1,0 +1,20 @@
+//
+//  DDPCH.pch
+//  DDMobileProject
+//
+//  Created by QJ_001 on 16/8/3.
+//  Copyright © 2016年 Deven. All rights reserved.
+//
+
+#ifndef DDPCH_pch
+#define DDPCH_pch
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+@import UIKit;
+@import Foundation;
+#import "Masonry.h"
+#import "Macro.h"
+#import "MBProgressHUD+DDAdd.h"
+
+#endif /* DDPCH_pch */

@@ -1,0 +1,54 @@
+PODS:
+  - BaiduMapKit (3.0.0)
+  - CYLTabBarController (1.6.0)
+  - FDFullscreenPopGesture (1.1)
+  - GPUImage (0.1.7)
+  - LBXAlertAction (1.0.3)
+  - Masonry (0.6.4)
+  - MBProgressHUD (1.0.0)
+  - RESideMenu (4.0.7)
+  - RTRootNavigationController (0.5.22)
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
+  - ZYCornerRadius (0.8.1)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - CYLTabBarController (= 1.6.0)
+  - FDFullscreenPopGesture (= 1.1)
+  - GPUImage
+  - LBXAlertAction
+  - Masonry (~> 0.6.4)
+  - MBProgressHUD (~> 1.0.0)
+  - RESideMenu (~> 4.0.7)
+  - RTRootNavigationController
+  - ZXingObjC (~> 3.0)
+  - ZYCornerRadius (from `https://github.com/liuzhiyi1992/ZYCornerRadius.git`, tag `0.9.1`)
+
+EXTERNAL SOURCES:
+  ZYCornerRadius:
+    :git: https://github.com/liuzhiyi1992/ZYCornerRadius.git
+    :tag: 0.9.1
+
+CHECKOUT OPTIONS:
+  ZYCornerRadius:
+    :git: https://github.com/liuzhiyi1992/ZYCornerRadius.git
+    :tag: 0.9.1
+
+SPEC CHECKSUMS:
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  CYLTabBarController: efbdd574772be17f17965acd7ee993f5972ff02f
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  LBXAlertAction: e904f511f0e44fde323e056691d7a8a99d71faba
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  RTRootNavigationController: cf134c044a8ce14d97fc668847ed4567efc53f91
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
+  ZYCornerRadius: 485a8e9304d16d1620641054a08b9c0f55dd512c
+
+PODFILE CHECKSUM: 18287a6701193110a3ed5c3486ba11eeb88d2cce
+
+COCOAPODS: 1.1.1

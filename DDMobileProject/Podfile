@@ -1,0 +1,20 @@
+platform :ios, '7.0'
+
+target 'DDMobileProject' do
+pod 'CYLTabBarController','1.6.0'
+pod 'Masonry', '~> 0.6.4'
+pod 'FDFullscreenPopGesture', '1.1'
+pod 'RESideMenu', '~> 4.0.7'
+pod 'BaiduMapKit'
+
+pod 'ZXingObjC', '~> 3.0'
+pod 'LBXAlertAction'
+pod 'ZYCornerRadius', git:'https://github.com/liuzhiyi1992/ZYCornerRadius.git',tag:'0.9.1'
+pod 'MBProgressHUD', '~> 1.0.0'
+pod 'GPUImage'
+pod 'RTRootNavigationController'
+end
+
+
+
+
