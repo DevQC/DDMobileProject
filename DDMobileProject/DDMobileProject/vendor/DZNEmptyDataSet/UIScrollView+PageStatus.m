@@ -1,6 +1,5 @@
 //
 //  UIScrollView+PageStatus.m
-//  催客网项目
 //
 //  Created by nate on 16/7/22.
 //  Copyright © 2016年 TonyLi. All rights reserved.
@@ -19,6 +18,9 @@ static char const * const kSucceedEmptyDetailAttributeStr = "succeedEmptyAttribu
 static char const * const kSucceedEmptyAttributeStr = "succeedEmptyAttributeStr";
 static char const * const kverticalOffset = "verticalOffset";
 static char const * const kverticalPadding = "verticalPadding";
+static char const * const kBottomButtonName = "bottomButtonName";
+static char const * const kBottomButtonBgImage = "bottomButtonBgImage";
+static char const * const kEnableBgTap = "enableBgTap";
 
 @implementation UIScrollView (PageStatus)
 
@@ -115,7 +117,7 @@ static char const * const kverticalPadding = "verticalPadding";
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
 {
-    if (self.emptyViewTapBlock) {
+    if (self.emptyViewTapBlock && self.enableBgTap) {
         self.emptyViewTapBlock();
     }
 }
@@ -128,16 +130,16 @@ static char const * const kverticalPadding = "verticalPadding";
 
 - (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
 {
-    if (self.verticalPadding.floatValue) {
-        return self.verticalPadding.floatValue;
+    if (self.verticalPadding) {
+        return self.verticalPadding;
     }
     return 15;
 }
 
 - (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView
 {
-    if (self.verticalOffset.floatValue) {
-        return self.verticalOffset.floatValue;
+    if (self.verticalOffset) {
+        return self.verticalOffset;
     }
     return -90;
 }
@@ -147,6 +149,33 @@ static char const * const kverticalPadding = "verticalPadding";
     return [UIColor whiteColor];
 }
 
+- (nullable NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
+{
+    
+    if (self.bottomButtonName) {
+        return  self.bottomButtonName;//非必须
+    }
+    
+    return nil;
+    
+}
+
+
+- (nullable UIImage *)buttonBackgroundImageForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
+{
+    if (self.bottomButtonBgImage) {
+        return self.bottomButtonBgImage;
+    }
+    return nil;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button
+{
+    if (self.emptyViewTapBlock) {
+        self.emptyViewTapBlock();
+    }
+
+}
 
 #pragma mark - getters / setters
 
@@ -179,7 +208,7 @@ static char const * const kverticalPadding = "verticalPadding";
     objc_setAssociatedObject(self, kSucceedEmptyAttributeStr, succeedEmptyAttributeStr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString *)succeedEmptyAttributeStr
+- (NSAttributedString *)succeedEmptyAttributeStr
 {
     return objc_getAssociatedObject(self, kSucceedEmptyAttributeStr);
 }
@@ -190,7 +219,7 @@ static char const * const kverticalPadding = "verticalPadding";
      objc_setAssociatedObject(self, kSucceedEmptyDetailAttributeStr, succeedEmptyAttributeStrDetailStr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString *)succeedEmptyAttributeStrDetailStr
+- (NSAttributedString *)succeedEmptyAttributeStrDetailStr
 {
     return objc_getAssociatedObject(self, kSucceedEmptyDetailAttributeStr);
 }
@@ -232,27 +261,63 @@ static char const * const kverticalPadding = "verticalPadding";
 
 #pragma mark -verticalOffset
 
-- (void)setVerticalOffset:(NSString *)verticalOffset
+- (void)setVerticalOffset:(CGFloat )verticalOffset
 {
-    objc_setAssociatedObject(self, kverticalOffset, verticalOffset, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, kverticalOffset, @(verticalOffset), OBJC_ASSOCIATION_ASSIGN);
 
 }
 
-- (NSString *)verticalOffset
+- (CGFloat )verticalOffset
 {
-    return objc_getAssociatedObject(self, kverticalOffset);
+    return [objc_getAssociatedObject(self, kverticalOffset) floatValue];
 }
 
 #pragma mark -verticalPadding
 
-- (void)setVerticalPadding:(NSString *)verticalPadding
+- (void)setVerticalPadding:(CGFloat )verticalPadding
 {
-   objc_setAssociatedObject(self, kverticalPadding, verticalPadding, OBJC_ASSOCIATION_ASSIGN);
+   objc_setAssociatedObject(self, kverticalPadding, @(verticalPadding), OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (NSString *)verticalPadding
+- (CGFloat )verticalPadding
 {
-    return objc_getAssociatedObject(self, kverticalPadding);
+    return [objc_getAssociatedObject(self, kverticalPadding) floatValue];
+}
+
+#pragma mark - bottomButtonBgImage
+
+- (void)setBottomButtonName:(NSAttributedString *)bottomButtonName
+{
+    objc_setAssociatedObject(self, kBottomButtonName, bottomButtonName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSAttributedString *)bottomButtonName
+{
+    return objc_getAssociatedObject(self, kBottomButtonName);
+}
+
+#pragma mark - bottomButtonBgImage
+
+- (void)setBottomButtonBgImage:(UIImage *)bottomButtonBgImage
+{
+    objc_setAssociatedObject(self, kBottomButtonBgImage, bottomButtonBgImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIImage *)bottomButtonBgImage
+{
+    return objc_getAssociatedObject(self, kBottomButtonBgImage);
+}
+
+#pragma mark - enableBgTap
+
+- (void)setEnableBgTap:(BOOL)enableBgTap
+{
+    objc_setAssociatedObject(self, kEnableBgTap, @(enableBgTap), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)enableBgTap
+{
+    return [objc_getAssociatedObject(self, kEnableBgTap) boolValue];
 }
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "DDEmptyDetailController.h"
-#import "UIScrollView+PageStatus.h"
 
 @interface DDEmptyDetailController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -30,12 +29,17 @@
     self.tableView.emptyDataSetSource = self.tableView;//必须
     self.tableView.emptyDataSetDelegate = self.tableView;//必须
     self.tableView.currentPageStatus = self.pageStatus;//必须
-    self.tableView.verticalOffset = @"2";//非必须
+    self.tableView.verticalOffset = 10;//非必须
     self.tableView.succeedEmptyImage = [UIImage imageNamed:@"nbls_yyyj_icon"];//非必须
     self.tableView.succeedEmptyStr = @"我成功了";//非必须
+    self.tableView.enableBgTap = YES;//非必须
+    self.tableView.bottomButtonName = [[NSAttributedString alloc] initWithString:@"重新加载"];
     NSAttributedString *attribute = [[NSAttributedString alloc] initWithString:@"加载成功" attributes:@{NSForegroundColorAttributeName:[UIColor redColor],
                                 NSFontAttributeName: [UIFont systemFontOfSize:18]}];//非必须
     self.tableView.succeedEmptyAttributeStr = attribute;//非必须
+    self.tableView.emptyViewTapBlock = ^{
+        NSLog(@"我知道了");
+    };
 }
 
 - (void)didReceiveMemoryWarning {
