@@ -7,12 +7,7 @@
 //
 
 #import "DDHomeViewController.h"
-#import "DDHomeSubViewController.h"
 #import "RESideMenu.h"
-#import "DDMapViewController.h"
-#import "DDScanMenuViewController.h"
-#import "DDPicMenuViewController.h"
-#import "DDCustomNavController.h"
 
 @interface DDHomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -20,6 +15,7 @@
 }
 @property (nonatomic,strong) DDTableView *tableView;
 @property (nonatomic,strong) NSArray *itemArr;
+@property (nonatomic,strong) NSDictionary *dictData;
 @end
 
 @implementation DDHomeViewController
@@ -27,9 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layoutUI];
-    staticStr = @"5669";
-    NSLog(@"%@",staticStr);
-    extern NSString *externStr1;
+//    extern NSString *externStr1;
 //    NSLog(@"%@",externStr1);
 }
 
@@ -38,9 +32,30 @@
 - (NSArray *)itemArr
 {
     if (!_itemArr) {
-        _itemArr = [NSArray arrayWithObjects:@"地图",@"图片",@"音频",@"视频",@"动画",@"二维码",@"多线程",@"JSPatch",@"Runlup",@"H5交互",@"提示框",@"自定义导航栏", nil];
+        _itemArr = [[NSArray alloc]init];
     }
     return _itemArr;
+}
+
+- (NSDictionary *)dictData
+{
+    if (!_dictData) {
+        _dictData = @{@"地图":@"DDMapViewController",
+                      @"图片":@"DDPicMenuViewController",
+                      @"动画":@"DDHomeSubViewController",
+                      @"二维码":@"DDScanMenuViewController",
+                      @"音频":@"DDHomeSubViewController",
+                      @"视频":@"DDHomeSubViewController",
+                      @"多线程":@"DDHomeSubViewController",
+                      @"JSPatch":@"DDHomeSubViewController",
+                      @"Runlup":@"DDHomeSubViewController",
+                      @"H5交互":@"DDHomeSubViewController",
+                      @"提示框":@"DDHomeSubViewController",
+                      @"自定义导航栏":@"DDCustomNavController",
+                      @"空数据":@"DDEmptySetController"};
+
+    }
+    return _dictData;
 }
 
 #pragma mark - layoutUI
@@ -58,21 +73,22 @@
         
     }
     
-   MBProgressHUD *HUD = [MBProgressHUD showSystemIndicate];
-    _HUD = HUD;
+//   MBProgressHUD *HUD = [MBProgressHUD showSystemIndicate];
+//    _HUD = HUD;
 }
 
 #pragma mark - TableView Delegate && DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.itemArr.count;
+    return self.dictData.allKeys.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *key = self.dictData.allKeys[indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc]init];
-    cell.textLabel.text = self.itemArr[indexPath.row];
+    cell.textLabel.text = key;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
@@ -80,39 +96,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [_HUD hideAnimated:YES];
-    switch (indexPath.row) {
-        case 0:
-        {
-            DDMapViewController *mapVC = [[DDMapViewController alloc]init];
-            [self.navigationController pushViewController:mapVC animated:YES];
-        }
-            break;
-        case 1:
-        {
-            DDPicMenuViewController *picMenuVC = [[DDPicMenuViewController alloc]init];
-            [self.navigationController pushViewController:picMenuVC animated:YES];
-        }
-            break;
-        case 5:
-        {
-            DDScanMenuViewController *scanVC = [[DDScanMenuViewController alloc]init];
-            [self.navigationController pushViewController:scanVC animated:YES];
-        }
-            break;
-        case 11:
-        {
-            DDCustomNavController *scanVC = [[DDCustomNavController alloc]init];
-            [self.navigationController pushViewController:scanVC animated:YES];
-        }
-            break;
-        default:
-        {
-            DDHomeSubViewController *subVC = [[DDHomeSubViewController alloc]init];
-            [self.navigationController pushViewController:subVC animated:YES];
-        }
-            break;
-    }
+//    [_HUD hideAnimated:YES];
+    NSString *key = self.dictData.allKeys[indexPath.row];
+    NSString *vc = self.dictData[key];
+    UIViewController *subVc = [NSClassFromString(vc) new];
+    [self.navigationController pushViewController:subVc animated:YES];
     
 
 }

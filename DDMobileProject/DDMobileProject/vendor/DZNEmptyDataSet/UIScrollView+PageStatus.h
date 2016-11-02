@@ -26,9 +26,26 @@ typedef void(^EmptyViewTapBlock)();
 @property (nonatomic, assign) PageStatus currentPageStatus;
 
 /**
- *  如果请求成功，空数据，显示提示
+ *  如果请求成功，空数据，显示标题提示
  */
 @property (nonatomic, strong) NSString *succeedEmptyStr;
+@property (nonatomic, strong) NSAttributedString *succeedEmptyAttributeStr;
+
+/**
+ *  如果请求成功，空数据，显示内容提示
+ */
+@property (nonatomic, strong) NSString *succeedEmptyDetailStr;
+@property (nonatomic, strong) NSAttributedString *succeedEmptyAttributeStrDetailStr;
+
+/**
+ * 竖直方向偏移
+ */
+@property (nonatomic, strong) NSString *verticalOffset;
+
+/**
+ * 元素竖直方向间距
+ */
+@property (nonatomic, strong) NSString *verticalPadding;
 
 /**
  *  如果请求成功，空数据，显示的图片

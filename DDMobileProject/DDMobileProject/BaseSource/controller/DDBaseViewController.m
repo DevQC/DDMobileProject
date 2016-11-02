@@ -245,8 +245,8 @@
             self.navigationItem.hidesBackButton = YES;
         }
     }else{
-        UIButton *left_button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 22, 22)];
-        [left_button setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+        UIButton *left_button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+        [left_button setImage:[UIImage imageNamed:@"returnarrow"] forState:UIControlStateNormal];
         [left_button setImageEdgeInsets:UIEdgeInsetsMake(0, -6, 0, 6)];
         [left_button addTarget:self action:@selector(left_click:) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:left_button];

@@ -109,7 +109,6 @@
 		D717AC561D53331800D18F12 /* UIScreen+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D717AB941D53331800D18F12 /* UIScreen+Frame.m */; };
 		D717AC571D53331800D18F12 /* UIScrollView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D717AB971D53331800D18F12 /* UIScrollView+Addition.m */; };
 		D717AC581D53331800D18F12 /* UIScrollView+APParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D717AB991D53331800D18F12 /* UIScrollView+APParallaxHeader.m */; };
-		D717AC591D53331800D18F12 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D717AB9B1D53331800D18F12 /* UIScrollView+EmptyDataSet.m */; };
 		D717AC5A1D53331800D18F12 /* UIScrollView+Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = D717AB9D1D53331800D18F12 /* UIScrollView+Pages.m */; };
 		D717AC5B1D53331800D18F12 /* UISearchBar+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D717ABA01D53331800D18F12 /* UISearchBar+Blocks.m */; };
 		D717AC5C1D53331800D18F12 /* UISplitViewController+QuickAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = D717ABA31D53331800D18F12 /* UISplitViewController+QuickAccess.m */; };
@@ -172,8 +171,11 @@
 		D7DE97881D5475C500C070EE /* DDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DE97851D5475C500C070EE /* DDTableView.m */; };
 		D7DE978A1D547A5300C070EE /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7DE97891D547A5300C070EE /* CodeScan.bundle */; };
 		D7DE97941D547DC800C070EE /* DDPicMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DE97931D547DC800C070EE /* DDPicMenuViewController.m */; };
+		FA0171CD1DC9840600109573 /* DDEmptyDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0171CC1DC9840600109573 /* DDEmptyDetailController.m */; };
+		FA0171D91DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0171D81DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m */; };
 		FA5978311DC89FB80044F53C /* UIScrollView+PageStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5978301DC89FB80044F53C /* UIScrollView+PageStatus.m */; };
 		FA8E7F2F1DB4CFCC0086386E /* DDCustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E7F2E1DB4CFCC0086386E /* DDCustomNavController.m */; };
+		FAFD407A1DC97C930055E6DD /* DDEmptySetController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD40791DC97C930055E6DD /* DDEmptySetController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -398,8 +400,6 @@
 		D717AB971D53331800D18F12 /* UIScrollView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Addition.m"; sourceTree = "<group>"; };
 		D717AB981D53331800D18F12 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		D717AB991D53331800D18F12 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
-		D717AB9A1D53331800D18F12 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
-		D717AB9B1D53331800D18F12 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		D717AB9C1D53331800D18F12 /* UIScrollView+Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Pages.h"; sourceTree = "<group>"; };
 		D717AB9D1D53331800D18F12 /* UIScrollView+Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Pages.m"; sourceTree = "<group>"; };
 		D717AB9F1D53331800D18F12 /* UISearchBar+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Blocks.h"; sourceTree = "<group>"; };
@@ -525,10 +525,16 @@
 		D7DE97921D547DC800C070EE /* DDPicMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPicMenuViewController.h; sourceTree = "<group>"; };
 		D7DE97931D547DC800C070EE /* DDPicMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPicMenuViewController.m; sourceTree = "<group>"; };
 		E8F57E637F99AC51AA342C52 /* libPods-DDMobileProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDMobileProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0171CB1DC9840600109573 /* DDEmptyDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDEmptyDetailController.h; sourceTree = "<group>"; };
+		FA0171CC1DC9840600109573 /* DDEmptyDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDEmptyDetailController.m; sourceTree = "<group>"; };
+		FA0171D71DC9DB5E00109573 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		FA0171D81DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		FA59782F1DC89FB80044F53C /* UIScrollView+PageStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PageStatus.h"; sourceTree = "<group>"; };
 		FA5978301DC89FB80044F53C /* UIScrollView+PageStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PageStatus.m"; sourceTree = "<group>"; };
 		FA8E7F2D1DB4CFCC0086386E /* DDCustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCustomNavController.h; sourceTree = "<group>"; };
 		FA8E7F2E1DB4CFCC0086386E /* DDCustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCustomNavController.m; sourceTree = "<group>"; };
+		FAFD40781DC97C930055E6DD /* DDEmptySetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDEmptySetController.h; sourceTree = "<group>"; };
+		FAFD40791DC97C930055E6DD /* DDEmptySetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDEmptySetController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1335,8 +1341,6 @@
 				D717AB971D53331800D18F12 /* UIScrollView+Addition.m */,
 				D717AB981D53331800D18F12 /* UIScrollView+APParallaxHeader.h */,
 				D717AB991D53331800D18F12 /* UIScrollView+APParallaxHeader.m */,
-				D717AB9A1D53331800D18F12 /* UIScrollView+EmptyDataSet.h */,
-				D717AB9B1D53331800D18F12 /* UIScrollView+EmptyDataSet.m */,
 				D717AB9C1D53331800D18F12 /* UIScrollView+Pages.h */,
 				D717AB9D1D53331800D18F12 /* UIScrollView+Pages.m */,
 			);
@@ -1526,6 +1530,7 @@
 		D717AC8E1D53414F00D18F12 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD40771DC97C460055E6DD /* EmptyDataSet */,
 				FA8E7F2C1DB4CFAB0086386E /* CustomNav */,
 				D7DE978B1D547DAF00C070EE /* PicManager */,
 				D709FEC41D545D5E0021185E /* Xscan */,
@@ -1739,6 +1744,8 @@
 		FA59782B1DC897700044F53C /* DZNEmptyDataSet */ = {
 			isa = PBXGroup;
 			children = (
+				FA0171D71DC9DB5E00109573 /* UIScrollView+EmptyDataSet.h */,
+				FA0171D81DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m */,
 				FA59782F1DC89FB80044F53C /* UIScrollView+PageStatus.h */,
 				FA5978301DC89FB80044F53C /* UIScrollView+PageStatus.m */,
 			);
@@ -1752,6 +1759,17 @@
 				FA8E7F2E1DB4CFCC0086386E /* DDCustomNavController.m */,
 			);
 			path = CustomNav;
+			sourceTree = "<group>";
+		};
+		FAFD40771DC97C460055E6DD /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD40781DC97C930055E6DD /* DDEmptySetController.h */,
+				FAFD40791DC97C930055E6DD /* DDEmptySetController.m */,
+				FA0171CB1DC9840600109573 /* DDEmptyDetailController.h */,
+				FA0171CC1DC9840600109573 /* DDEmptyDetailController.m */,
+			);
+			path = EmptyDataSet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1951,6 +1969,7 @@
 				D717AC511D53331800D18F12 /* UINavigationItem+Margin.m in Sources */,
 				D707F3E31D51969000BA41FF /* main.m in Sources */,
 				D717AC7D1D53331800D18F12 /* UIViewController+BackButtonTouched.m in Sources */,
+				FA0171D91DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m in Sources */,
 				D717AC2F1D53331800D18F12 /* UIImage+BetterFace.m in Sources */,
 				D717AC841D53331800D18F12 /* UIWebView+Alert.m in Sources */,
 				D709FECD1D545D820021185E /* DDScanMenuViewController.m in Sources */,
@@ -2025,10 +2044,10 @@
 				D717AC6A1D53331800D18F12 /* UITextView+Select.m in Sources */,
 				D709FEF31D54722E0021185E /* LBXScanNative.m in Sources */,
 				D717AC1F1D53331800D18F12 /* UIButton+Submitting.m in Sources */,
+				FA0171CD1DC9840600109573 /* DDEmptyDetailController.m in Sources */,
 				D717AC371D53331800D18F12 /* UIImage+Merge.m in Sources */,
 				D717AC1C1D53331800D18F12 /* UIButton+CountDown.m in Sources */,
 				D709FEF51D54722E0021185E /* LBXScanResult.m in Sources */,
-				D717AC591D53331800D18F12 /* UIScrollView+EmptyDataSet.m in Sources */,
 				D717AC711D53331800D18F12 /* UIView+FDCollapsibleConstraints.m in Sources */,
 				D717AC5C1D53331800D18F12 /* UISplitViewController+QuickAccess.m in Sources */,
 				D717AC881D53331800D18F12 /* UIWebView+Load.m in Sources */,
@@ -2090,6 +2109,7 @@
 				D7DE97881D5475C500C070EE /* DDTableView.m in Sources */,
 				D717AC1B1D53331800D18F12 /* UIButton+Block.m in Sources */,
 				D709FEF81D54722E0021185E /* LBXScanViewController.m in Sources */,
+				FAFD407A1DC97C930055E6DD /* DDEmptySetController.m in Sources */,
 				D717AC681D53331800D18F12 /* UITextView+PinchZoom.m in Sources */,
 				D717AC141D53331800D18F12 /* UIBarButtonItem+Action.m in Sources */,
 				D717AC531D53331800D18F12 /* UIResponder+Chain.m in Sources */,
