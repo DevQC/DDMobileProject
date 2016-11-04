@@ -8,6 +8,7 @@
 
 #import "DDMoreViewController.h"
 
+
 @interface DDMoreViewController ()
 
 @end
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"更多";
+    
 }
 
 - (void)didReceiveMemoryWarning {

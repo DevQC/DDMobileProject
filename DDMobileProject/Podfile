@@ -13,6 +13,7 @@ pod 'ZYCornerRadius', git:'https://github.com/liuzhiyi1992/ZYCornerRadius.git',t
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'GPUImage'
 pod 'RTRootNavigationController'
+pod 'MWPhotoBrowser'
 end
 
 

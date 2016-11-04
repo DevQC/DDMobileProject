@@ -11,7 +11,8 @@
 @interface DDPicMenuViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray* arrayItems;
+@property (nonatomic, strong) NSArray *arrayItems;
+@property (nonatomic, strong) NSArray *controllerArray;
 
 
 @end
@@ -34,6 +35,14 @@
         _arrayItems = [[NSArray alloc]initWithObjects:@"图片处理",@"图片选择",@"图片预览",@"图片信息",@"七牛上传图片", nil];
     }
     return _arrayItems;
+}
+
+- (NSArray *)controllerArray
+{
+    if (!_controllerArray) {
+        _controllerArray = [NSArray arrayWithObjects:@"DDPictureManageController",@"",@"",@"",@"", nil];
+    }
+    return _controllerArray;
 }
 
 #pragma mark - layoutUI
@@ -80,6 +89,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSString *stringVC = self.controllerArray[indexPath.row];
+    if (!stringVC.length) {
+        return;
+    }
+    
+    UIViewController *vc = [NSClassFromString(stringVC) new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 定制导航栏

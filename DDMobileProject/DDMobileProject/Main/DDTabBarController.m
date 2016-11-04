@@ -13,7 +13,7 @@
 #import "DDDiscoverViewController.h"
 #import "DDMoreViewController.h"
 #import "DDMineViewController.h"
-
+#import "UITabBar+Badge.h"
 
 @interface DDTabBarController ()<UITabBarControllerDelegate>
 
@@ -32,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     
     
 }
 
@@ -60,12 +61,13 @@
     DDMoreViewController *moreVC = [[DDMoreViewController alloc]init];
     DDNavigationController* moreNav = [[DDNavigationController alloc] initWithRootViewController:moreVC];
     
-    moreNav.tabBarItem.badgeValue = @"";
+    NSLog(@"tabBarSubViews:-----%@",moreNav.tabBarItem);
     mineNav.tabBarItem.badgeValue = @"100";
     
     NSLog(@"%@",self.tabBar.subviews);
     
     self.viewControllers = @[homeNav,disNav,mineNav,moreNav];
+   
     
 
     

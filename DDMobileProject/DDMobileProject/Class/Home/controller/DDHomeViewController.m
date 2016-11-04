@@ -8,6 +8,7 @@
 
 #import "DDHomeViewController.h"
 #import "RESideMenu.h"
+#import "UITabBar+Badge.h"
 
 @interface DDHomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layoutUI];
+    [self.tabBarController.tabBar showBadgeOnItemIndex:3];
 //    extern NSString *externStr1;
 //    NSLog(@"%@",externStr1);
 }
@@ -46,7 +48,7 @@
                       @"二维码":@"DDScanMenuViewController",
                       @"音频":@"DDHomeSubViewController",
                       @"视频":@"DDHomeSubViewController",
-                      @"多线程":@"DDHomeSubViewController",
+                      @"多线程":@"DDGCDViewController",
                       @"JSPatch":@"DDHomeSubViewController",
                       @"Runlup":@"DDHomeSubViewController",
                       @"H5交互":@"DDHomeSubViewController",
