@@ -175,6 +175,11 @@
 		FA0171D91DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0171D81DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m */; };
 		FA3A3BF51DCC1AF7002AF77D /* DDGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A3BF41DCC1AF7002AF77D /* DDGCDViewController.m */; };
 		FA3A3BFB1DCC2250002AF77D /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A3BFA1DCC2250002AF77D /* UITabBar+Badge.m */; };
+		FA3A3C081DCC6FBC002AF77D /* UIControl+userStastistics.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A3BFF1DCC6FBC002AF77D /* UIControl+userStastistics.m */; };
+		FA3A3C091DCC6FBC002AF77D /* UIViewController+userStastistics.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A3C011DCC6FBC002AF77D /* UIViewController+userStastistics.m */; };
+		FA3A3C0A1DCC6FBC002AF77D /* WHookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A3C031DCC6FBC002AF77D /* WHookUtility.m */; };
+		FA3A3C0B1DCC6FBC002AF77D /* WGlobalUserStatisticsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A3C051DCC6FBC002AF77D /* WGlobalUserStatisticsConfig.plist */; };
+		FA3A3C0C1DCC6FBC002AF77D /* WUserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A3C071DCC6FBC002AF77D /* WUserStatistics.m */; };
 		FA5978311DC89FB80044F53C /* UIScrollView+PageStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5978301DC89FB80044F53C /* UIScrollView+PageStatus.m */; };
 		FA7F221E1DCB1294004AABE8 /* DDPictureManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F221D1DCB1294004AABE8 /* DDPictureManageController.m */; };
 		FA7F22211DCB1CC1004AABE8 /* DDPictureShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F22201DCB1CC1004AABE8 /* DDPictureShowController.m */; };
@@ -540,6 +545,16 @@
 		FA3A3BF41DCC1AF7002AF77D /* DDGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGCDViewController.m; sourceTree = "<group>"; };
 		FA3A3BF91DCC2250002AF77D /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
 		FA3A3BFA1DCC2250002AF77D /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
+		FA3A3BFE1DCC6FBC002AF77D /* UIControl+userStastistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+userStastistics.h"; sourceTree = "<group>"; };
+		FA3A3BFF1DCC6FBC002AF77D /* UIControl+userStastistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+userStastistics.m"; sourceTree = "<group>"; };
+		FA3A3C001DCC6FBC002AF77D /* UIViewController+userStastistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+userStastistics.h"; sourceTree = "<group>"; };
+		FA3A3C011DCC6FBC002AF77D /* UIViewController+userStastistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+userStastistics.m"; sourceTree = "<group>"; };
+		FA3A3C021DCC6FBC002AF77D /* WHookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHookUtility.h; sourceTree = "<group>"; };
+		FA3A3C031DCC6FBC002AF77D /* WHookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHookUtility.m; sourceTree = "<group>"; };
+		FA3A3C041DCC6FBC002AF77D /* WEventIDConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventIDConstant.h; sourceTree = "<group>"; };
+		FA3A3C051DCC6FBC002AF77D /* WGlobalUserStatisticsConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WGlobalUserStatisticsConfig.plist; sourceTree = "<group>"; };
+		FA3A3C061DCC6FBC002AF77D /* WUserStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserStatistics.h; sourceTree = "<group>"; };
+		FA3A3C071DCC6FBC002AF77D /* WUserStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserStatistics.m; sourceTree = "<group>"; };
 		FA59782F1DC89FB80044F53C /* UIScrollView+PageStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PageStatus.h"; sourceTree = "<group>"; };
 		FA5978301DC89FB80044F53C /* UIScrollView+PageStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PageStatus.m"; sourceTree = "<group>"; };
 		FA7F221C1DCB1294004AABE8 /* DDPictureManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPictureManageController.h; sourceTree = "<group>"; };
@@ -969,6 +984,7 @@
 		D707F3E01D51969000BA41FF /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A3BFC1DCC6FBC002AF77D /* UserStatistics */,
 				FA7F22321DCB2A48004AABE8 /* YQImageTool */,
 				FA59782B1DC897700044F53C /* DZNEmptyDataSet */,
 				D724B3201D90D37800C0327C /* MBProgressHUD */,
@@ -1829,6 +1845,31 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		FA3A3BFC1DCC6FBC002AF77D /* UserStatistics */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A3BFD1DCC6FBC002AF77D /* Category_Statistics */,
+				FA3A3C041DCC6FBC002AF77D /* WEventIDConstant.h */,
+				FA3A3C051DCC6FBC002AF77D /* WGlobalUserStatisticsConfig.plist */,
+				FA3A3C061DCC6FBC002AF77D /* WUserStatistics.h */,
+				FA3A3C071DCC6FBC002AF77D /* WUserStatistics.m */,
+			);
+			path = UserStatistics;
+			sourceTree = "<group>";
+		};
+		FA3A3BFD1DCC6FBC002AF77D /* Category_Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A3BFE1DCC6FBC002AF77D /* UIControl+userStastistics.h */,
+				FA3A3BFF1DCC6FBC002AF77D /* UIControl+userStastistics.m */,
+				FA3A3C001DCC6FBC002AF77D /* UIViewController+userStastistics.h */,
+				FA3A3C011DCC6FBC002AF77D /* UIViewController+userStastistics.m */,
+				FA3A3C021DCC6FBC002AF77D /* WHookUtility.h */,
+				FA3A3C031DCC6FBC002AF77D /* WHookUtility.m */,
+			);
+			path = Category_Statistics;
+			sourceTree = "<group>";
+		};
 		FA59782B1DC897700044F53C /* DZNEmptyDataSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -1981,6 +2022,7 @@
 				D7DE978A1D547A5300C070EE /* CodeScan.bundle in Resources */,
 				D707F3E41D51969000BA41FF /* Main.storyboard in Resources */,
 				D707F3E51D51969000BA41FF /* Info.plist in Resources */,
+				FA3A3C0B1DCC6FBC002AF77D /* WGlobalUserStatisticsConfig.plist in Resources */,
 				D707F3E21D51969000BA41FF /* LaunchScreen.storyboard in Resources */,
 				D707F3E61D51969000BA41FF /* Assets.xcassets in Resources */,
 			);
@@ -2059,6 +2101,7 @@
 				D717AC771D53331800D18F12 /* UIView+Screenshot.m in Sources */,
 				D717AC9B1D53416D00D18F12 /* DDMapViewController.m in Sources */,
 				D717AC411D53331800D18F12 /* UIImageView+GeometryConversion.m in Sources */,
+				FA3A3C081DCC6FBC002AF77D /* UIControl+userStastistics.m in Sources */,
 				D717AC151D53331800D18F12 /* UIBezierPath+BasicShapes.m in Sources */,
 				D717AC331D53331800D18F12 /* UIImage+Common.m in Sources */,
 				D717AC8C1D53331800D18F12 /* WebView+Debug.m in Sources */,
@@ -2066,6 +2109,7 @@
 				D7DE97871D5475C500C070EE /* DDNavigationController.m in Sources */,
 				D717AC2A1D53331800D18F12 /* UIFont+DynamicFontControl.m in Sources */,
 				D717AC511D53331800D18F12 /* UINavigationItem+Margin.m in Sources */,
+				FA3A3C0A1DCC6FBC002AF77D /* WHookUtility.m in Sources */,
 				D707F3E31D51969000BA41FF /* main.m in Sources */,
 				D717AC7D1D53331800D18F12 /* UIViewController+BackButtonTouched.m in Sources */,
 				FA0171D91DC9DB5E00109573 /* UIScrollView+EmptyDataSet.m in Sources */,
@@ -2134,6 +2178,7 @@
 				D717AC891D53331800D18F12 /* UIWebView+MetaParser.m in Sources */,
 				D717AC1E1D53331800D18F12 /* UIButton+MiddleAligning.m in Sources */,
 				D717AC651D53331800D18F12 /* UITextField+History.m in Sources */,
+				FA3A3C0C1DCC6FBC002AF77D /* WUserStatistics.m in Sources */,
 				D717AC381D53331800D18F12 /* UIImage+Orientation.m in Sources */,
 				D707F4091D519A4800BA41FF /* DDMoreViewController.m in Sources */,
 				D709FEF21D54722E0021185E /* LBXScanLineAnimation.m in Sources */,
@@ -2220,6 +2265,7 @@
 				D717AC141D53331800D18F12 /* UIBarButtonItem+Action.m in Sources */,
 				D717AC531D53331800D18F12 /* UIResponder+Chain.m in Sources */,
 				D717AC541D53331800D18F12 /* UIResponder+FirstResponder.m in Sources */,
+				FA3A3C091DCC6FBC002AF77D /* UIViewController+userStastistics.m in Sources */,
 				D7793BC31D9A4667008B693F /* UIColor+RandomColor.m in Sources */,
 				D717AC271D53331800D18F12 /* UIControl+Block.m in Sources */,
 				D717AC261D53331800D18F12 /* UIControl+ActionBlocks.m in Sources */,

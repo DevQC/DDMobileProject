@@ -25,9 +25,9 @@
     [super viewDidLoad];
     [self layoutUI];
     [self.tabBarController.tabBar showBadgeOnItemIndex:3];
-//    extern NSString *externStr1;
-//    NSLog(@"%@",externStr1);
+
 }
+
 
 #pragma mark - lazy load
 
